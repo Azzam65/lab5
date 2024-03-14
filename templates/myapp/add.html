@@ -1,0 +1,17 @@
+<!-- myapp/templates/myapp/add.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Person</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h1>Add Person</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">Show People</a>
+</body>
+</html>
